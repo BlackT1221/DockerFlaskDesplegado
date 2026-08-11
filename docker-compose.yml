@@ -35,20 +35,7 @@ services:
     environment:
       FLASK_ENV: development
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}ervices:
-  nginx-proxy-manager:
-    image: 'jc21/nginx-proxy-manager:latest'
-    container_name: proxy-manager
-    restart: always
-    ports:
-      - "80:80" #Http
-      - "81:81" #Administración de la API
-      - "443:443" #Https
-    volumes:
-      - ./npm_data:/data
-      - ./npm_letsencrypt:/etc/letsencrypt
-    networks:
-      - red-cba
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     networks:
       - red-cba
     depends_on:
