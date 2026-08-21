@@ -8,7 +8,7 @@ def home():
     try:
         conn = pymysql.connect(host='servidor-bd-ejemplo', user='root', password='sena123', database='082_db')
         conn.close()
-        db_status = "Conexión exitosa a la base de datos, prueba para CI/CD"
+        db_status = "Conexión exitosa a la base de datos, prueba para CI/CD para despliegue continuo"
     except Exception as e:
         db_status = f"Error al conectar a la base de datos: {e}"
 
