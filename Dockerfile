@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.12-slim
 WORKDIR /home/myapp
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip setuptools>=78.1.1 && \
