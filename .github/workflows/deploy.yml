@@ -47,6 +47,7 @@ jobs:
           context: .
           push: false
           load: true
+          no-cache: true
           tags: blackt1221/mi-api:latest
       
       - name: Escanear contenedor con trivy
